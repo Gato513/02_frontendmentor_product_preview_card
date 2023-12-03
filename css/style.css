@@ -1,0 +1,133 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* Estilos generales para todo el documento */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Se establece la fuente global para todo el sitio */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px; /* Tamaño de fuente base */
+}
+
+/* Estilos para la sección principal */
+main {
+    display: flex;
+    width: 41.2rem;
+    height: 30.9rem;
+}
+
+/* Estilos para las divisiones dentro de la sección principal */
+main > div {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Estilos para la columna de la imagen */
+.col-for-img {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem 0rem 0rem 1rem; /* Bordes redondeados */
+}
+
+/* Estilos para la columna de descripción */
+.col-for-descriction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 0 2.8rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+/* Estilos para los párrafos dentro de la columna de descripción */
+.col-for-descriction p {
+    color: hsl(228, 12%, 48%);
+}
+
+/* Estilos para el título dentro de la columna de descripción */
+.col-for-descriction > h1 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: xx-large;
+}
+
+/* Estilos para el contenedor de precios */
+.container-for-price {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+/* Estilos para el primer párrafo dentro del contenedor de precios */
+.container-for-price :first-child {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+/* Estilos para los párrafos siguientes dentro del contenedor de precios */
+.container-for-price :first-child ~ p {
+    text-decoration: line-through;
+}
+
+/* Estilos para el botón dentro de la columna de descripción */
+.col-for-descriction > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 1rem 0;
+    border-radius: 0.7rem;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: medium;
+    transition: background-color 200ms ease;
+}
+
+/* Estilos para el botón activo dentro de la columna de descripción */
+.col-for-descriction > button:active {
+    background-color: hsl(156, 42%, 18%);
+}
+
+/* Estilos para dispositivos con una pantalla de 661px o menos */
+@media screen and (max-width: 661px) {
+    main {
+        flex-direction: column;
+        width: 21rem;
+        height: 90%;
+    }
+
+    main > div {
+        max-width: none;
+    }
+
+    /* Estilos para la columna de la imagen en dispositivos más pequeños */
+    .col-for-img {
+        flex: none;
+        height: 14.7rem;
+        border-radius: 1rem 1rem 0rem 0rem;
+        background-image: url(../images/image-product-mobile.jpg);
+        background-size: contain;
+    }
+
+    /* Estilos para la columna de descripción en dispositivos más pequeños */
+    .col-for-descriction {
+        flex: 1;
+        padding: 0 0.9rem;
+        border-radius: 0rem 0rem 1rem 1rem;
+    }
+}
