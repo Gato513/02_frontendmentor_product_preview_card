@@ -56,10 +56,6 @@ main > div {
     line-height: 1.6rem;
 }
 
-.text{
-    
-}
-
 /* Estilos para el título dentro de la columna de descripción */
 .col-for-descriction > h1 {
     font-family: 'Fraunces', serif;
